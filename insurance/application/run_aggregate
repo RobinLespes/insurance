@@ -4,7 +4,8 @@ import pandas as pd
 from insurance.domain.aggregator import aggregate
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     df = pd.read_csv("../data/insurance.csv")
     res = aggregate(df)
+
     res.to_csv("../data/result.csv", index=False)
